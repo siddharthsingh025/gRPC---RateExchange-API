@@ -2,6 +2,19 @@
 Its a gRPC based Go-API , build with Bidirectional and unidirectional streaming , where a client a rate or currency  from Base to Destination  currency , and also get notify and get updated rate of currency as a response 
 
 
+
+## Start Currency server 
+      
+      go run main.go
+      
+## Send Request to server as client for product update using " grpcurl "
+    
+    grpcurl --plaintext -d @ localhost:9092  Currency.SubscribeRate
+    
+    { "Base" : "USD",
+      "Destination" : "GBP"
+    }
+
 ## Some OutPut
 
 
